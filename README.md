@@ -1,5 +1,11 @@
 
-### Analysis
+# Ridesharing Analysis of Pyber
+
+This project involves analyzing the dummy company "Pyber" who provides ridesharing services. Markdown jupyter notebook file below shows code and graphs of the analysis.
+
+Tools: python, jupyter notebook, seaborn, matplotlib, pandas
+
+#### Conclusions
 
 1. Pyber has the more rides, drivers, and fare $$ coming from Urban areas
 
@@ -7,7 +13,7 @@
 
 3. Although Urban areas see more rides per city, they also see lower average fare prices. You can see this trend shown within the scatter plot. More information would be needed to see why that is. My first thought would be to look at information about the trip distance. I could see the average fares being lower in an Urban area because people may be travelling shorter distances
 
-
+#### Markdown Jupyter Notebook file
 
 ```python
 #Dependencies
@@ -35,18 +41,21 @@ ride_data= pd.read_csv(ride_csv)
 print(ride_data.head())
 ```
 
-                 city  driver_count   type
-    0      Kelseyland            63  Urban
-    1      Nguyenbury             8  Urban
-    2    East Douglas            12  Urban
-    3   West Dawnfurt            34  Urban
-    4  Rodriguezburgh            52  Urban
-              city                 date   fare        ride_id
-    0     Sarabury  2016-01-16 13:49:27  38.35  5403689035038
-    1    South Roy  2016-01-02 18:42:34  17.49  4036272335942
-    2  Wiseborough  2016-01-21 17:35:29  44.18  3645042422587
-    3  Spencertown  2016-07-31 14:53:22   6.87  2242596575892
-    4   Nguyenbury  2016-07-09 04:42:44   6.28  1543057793673
+  |    |           city|  driver_count|   type |
+  | -- | ------------- | ------------ | ------ |
+  |  0 |     Kelseyland|            63|  Urban |
+  |  1 |     Nguyenbury|             8|  Urban |
+  |  2 |   East Douglas|            12|  Urban |
+  |  3 |  West Dawnfurt|            34|  Urban |
+  |  4 | Rodriguezburgh|            52|  Urban |
+    
+  |   |       city |               date | fare |      ride_id|
+  | - | ---------- | ------------------ | ---- | ----------- |
+  | 0 |   Sarabury |2016-01-16 13:49:27 |38.35 |5403689035038|
+  | 1 |  South Roy |2016-01-02 18:42:34 |17.49 |4036272335942|
+  | 2 |Wiseborough |2016-01-21 17:35:29 |44.18 |3645042422587|
+  | 3 |Spencertown |2016-07-31 14:53:22 | 6.87 |2242596575892|
+  | 4 | Nguyenbury |2016-07-09 04:42:44 | 6.28 |1543057793673|
     
 
 
@@ -78,19 +87,6 @@ fare_mean.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -144,19 +140,6 @@ ride_sum.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -210,19 +193,6 @@ fare_sum.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -283,19 +253,6 @@ city_group.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -357,19 +314,6 @@ bubble_table.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -542,19 +486,6 @@ perc_table.head()
 
 
 <div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
